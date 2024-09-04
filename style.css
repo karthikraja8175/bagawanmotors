@@ -206,7 +206,7 @@ button:hover .arrow:before {
 
 
 .parent img{
-  width: 100%; /* Ensures image takes up full width of the card */
+  width: 120%; /* Ensures image takes up full width of the card */
     height: 100%; /* Sets a fixed height for the images */
     object-fit: cover; /* Crops images to fill the area without distortion */
     border-radius: 8px;
