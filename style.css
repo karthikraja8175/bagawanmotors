@@ -44,10 +44,19 @@ nav {
   margin-right: 10px;
 }
 
-.logo h1 {
-  color: #e74c3c;
-  margin-bottom: 5px;
+.logo .name{
+  background-color: #000;
+  color:rgb(240, 12, 12);
+  font-size: 1.7vw;
+  line-height: 20px;
 }
+.logo .service{
+  color:rgb(255, 255, 255);
+  font-size: 1vw;
+}
+
+
+
 
 .nav-links {
   display: flex;
@@ -171,9 +180,96 @@ button:hover .arrow:before {
 }
 
 .hero-image img {
-  width: 100%; /* Set a specific width */
-  height: 120%; 
+  margin-left: -20%;
+  position: relative;
 }
+
+.parent {
+  position: absolute;
+  opacity: 0;
+  animation: fade-in-out 31s infinite;
+  flex: 1 1 calc(33.33% - 20px); /* Three cards per row with gap consideration */
+  box-sizing: border-box;
+  width: 400px;
+  padding: 20px;
+  perspective: 100vw;
+  margin-left: -40%;
+  margin-top: -15%;
+  
+}
+
+
+.card:hover {
+  background-position: -100px 100px, -100px 100px;
+  transform: rotate3d(0.5, 1, 0, 30deg);
+}
+
+
+.parent img{
+  width: 100%; /* Ensures image takes up full width of the card */
+    height: 100%; /* Sets a fixed height for the images */
+    object-fit: cover; /* Crops images to fill the area without distortion */
+    border-radius: 8px;
+}
+.parent .card-title {
+  display: inline-block;
+  color: #000000;
+  font-size: 2vw;
+  font-weight: 900;
+  transition: all 0.5s ease-in-out;
+  transform: translate3d(0px, 0px, 50px);
+}
+
+.content-box .card-title:hover {
+  transform: translate3d(0px, 0px, 60px);
+}
+
+.content-box img{
+    width:400px;
+    height:200px;
+}
+
+.parent:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.parent:nth-child(2) {
+  animation-delay: 4s;
+}
+
+.parent:nth-child(3) {
+  animation-delay: 8s;
+}
+
+.parent:nth-child(4) {
+  animation-delay: 12s;
+}
+
+.parent:nth-child(5) {
+  animation-delay: 16s;
+}
+
+.parent:nth-child(6) {
+  animation-delay: 20s;
+}
+
+.parent:nth-child(7) {
+  animation-delay: 24s;
+}
+
+.parent:nth-child(8) {
+  animation-delay: 28s;
+}
+
+@keyframes fade-in-out {
+  0% { opacity: 0; }
+  3% { opacity: 1; }
+  20% { opacity: 0; }
+  25% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+
 .services {
   text-align: center;
   padding: 50px 20px;
