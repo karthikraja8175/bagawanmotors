@@ -491,9 +491,9 @@ button:hover .arrow:before {
 }
 
 .choose-contant img{
-  width:70%;
-  height:70%;
-  margin:5%;
+  width:60%;
+  height:60%;
+  margin:4%;
   transition: transform 0.3s ease-in-out;
 }
 
